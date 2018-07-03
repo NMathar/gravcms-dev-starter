@@ -3,18 +3,21 @@
   "version": "1.0.0",
   "description": "Template for Grav CMS easy Development with docker",
   "main": "index.js",
-  "config" : { "version" : "1.4.6" },
+  "config": {
+    "version": "1.4.6",
+    "theme": "quark"
+  },
   "scripts": {
     "dev:test": "echo ./tmp/grav-v$npm_package_config_version.zip",
-    "dev:download": "wget -O grav-v$npm_package_config_version.zip https://getgrav.org/download/core/grav/$npm_package_config_version",
-    "dev:unzip": "unzip grav-v$npm_package_config_version.zip 'user/*' -d user",
-    "dev:clear": "rm grav-v$npm_package_config_grav-version.zip",
-    "dev:install": "npm run dev:download && npm run dev:unzip && docker-compose up -d && docker-compose logs -f gravcms",
+    "dev:download": "wget -O ./tmp/grav-v$npm_package_config_version.zip https://getgrav.org/download/core/grav/$npm_package_config_version",
+    "dev:unzip": "unzip ./tmp/grav-v$npm_package_config_version.zip 'grav/user/*' -d user && cp -r user/grav/user/* user && rm -r user/grav",
+    "dev:clear": "rm ./tmp/grav-v$npm_package_config_grav-version.zip",
+    "dev:install-theme-js": "npm --prefix ./user/theme/$npm_package_config_theme install ./user/theme/$npm_package_config_theme",
+    "dev:install": "npm run dev:download && npm run dev:unzip && npm run dev:install-theme-js && docker-compose up -d",
     "dev:uninstall": "docker-compose stop && docker-compose rm",
     "dev:env-start": "docker-compose start",
     "dev:env-stop": "docker-compose stop",
-    "dev": "./user/themes/quark/node_modules/gulp/bin/gulp.js --gulpfile .user/themes/quark/gulpfile.js"
-
+    "dev": "./user/themes/$npm_package_config_theme/node_modules/gulp/bin/gulp.js --gulpfile .user/themes/$npm_package_config_theme/gulpfile.js"
   },
   "keywords": [
     "grav",
