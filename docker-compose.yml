@@ -1,0 +1,12 @@
+version: '3'
+services:
+  gravcms:
+    image: nmonst4/gravcms-docker
+    ports:
+    - "8080:80"
+    volumes:
+    - ./user:/var/www/html/user
+    environment:
+      GRAV_VERSION: 1.4.6
+volumes:
+  data:

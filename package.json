@@ -1,0 +1,27 @@
+{
+  "name": "grav-dev-template",
+  "version": "1.0.0",
+  "description": "Template for Grav CMS easy Development with docker",
+  "main": "index.js",
+  "config" : { "version" : "1.4.6" },
+  "scripts": {
+    "dev:test": "echo grav-v$npm_package_config_version.zip",
+    "dev:download": "wget https://getgrav.org/download/core/grav/$npm_package_config_version",
+    "dev:unzip": "unzip grav-v$npm_package_config_version.zip 'user/*' -d user",
+    "dev:clear": "rm grav-v$npm_package_config_grav-version.zip",
+    "dev:install": "npm run dev:download && npm run dev:unzip && docker-compose up -d && docker-compose logs -f gravcms",
+    "dev:uninstall": "docker-compose stop && docker-compose rm",
+    "dev:env-start": "docker-compose start",
+    "dev:env-stop": "docker-compose stop",
+    "dev": "./user/themes/quark/node_modules/gulp/bin/gulp.js --gulpfile .user/themes/quark/gulpfile.js"
+
+  },
+  "keywords": [
+    "grav",
+    "docker",
+    "cms",
+    "php"
+  ],
+  "author": "Author",
+  "license": "ISC"
+}
