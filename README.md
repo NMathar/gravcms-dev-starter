@@ -6,7 +6,7 @@ Grav is a modern open source flat-file CMS.
 https://getgrav.org/
 
 
-This is a perfekt ready to run Dev Environment to Build fast and flexible your Grave CMS Homepage.
+This is a perfekt ready to run Dev Environment to build fast and flexible your Grave CMS Homepage.
 
 ## Requirements
 
@@ -35,7 +35,7 @@ This is a perfekt ready to run Dev Environment to Build fast and flexible your G
 
 **Install Plugins**
 
-For example Admin Plugin
+For example Admin-Plugin
 `npm run grav:install admin`
 
 **Install Themes**
@@ -50,7 +50,7 @@ For example Admin Plugin
 
 data -> Storage for shared stuff 
 
-user -> Grav User dir mounted to the docker container. This is the main directory.
+user -> Grav user dir mounted to the docker container. This is the main directory of all code changes.
 
 tmp -> Downloads and temp stuff to store
 
