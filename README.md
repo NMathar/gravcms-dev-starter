@@ -31,7 +31,14 @@ After `npm run dev:install` your website is up and running on http://localhost:8
 
 ## Start dev Environment
 
+Our container is running and our local dev envirionment is accesable but it feels a bit cluny to make changes and refresh page and again and again...
+
+So to prevent this we have installed a nice tool called browser-sync we can run this tool with
+
 `npm run dev`
+
+after this command our website is opening and after changes in the user directory our browser reload automaticly and save us from annoying tasks.
+
 
 ## Grav commands
 
