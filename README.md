@@ -9,14 +9,12 @@ https://getgrav.org/
 
 ### Windows
 - nodejs
-- php
 - unzip http://stahlworks.com/dev/unzip.exe
 - Docker
 - git
 
 ### Linux / Mac
 - nodejs
-- php
 - unzip 
 - Docker
 - git
@@ -26,6 +24,9 @@ https://getgrav.org/
 
 `npm run dev:install`
 
+## Start dev Environment
+
+`npm run dev`
 
 ## Grav commands
 
@@ -45,7 +46,9 @@ For example Admin Plugin
 ## Strukture
 
 data -> Storage for shared stuff 
+
 user -> Grav User dir mounted to the docker container. This is the main directory.
+
 tmp -> Downloads and temp stuff to store
 
 ## Running
