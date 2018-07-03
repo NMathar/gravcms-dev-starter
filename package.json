@@ -17,8 +17,8 @@
     "dev:uninstall": "docker-compose stop && docker-compose rm",
     "dev:env-start": "docker-compose start",
     "dev:env-stop": "docker-compose stop",
-    "dev": "./user/themes/$npm_package_config_theme/node_modules/gulp/bin/gulp.js --gulpfile .user/themes/$npm_package_config_theme/gulpfile.js",
-    "grav:list": "docker-compose exec -u www-data gravcms php bin/grav list",
+    "dev": "browser-sync start --proxy localhost:8080 --files user",
+    "grav:cmd": "docker-compose exec -u www-data gravcms php bin/grav",
     "grav:install": "docker-compose exec -u www-data gravcms php bin/gpm install"
   },
   "keywords": [
@@ -28,5 +28,8 @@
     "php"
   ],
   "author": "Author",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.24.5"
+  }
 }

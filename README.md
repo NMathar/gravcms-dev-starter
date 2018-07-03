@@ -1,13 +1,22 @@
 # Grav CMS Development starter Package
 
+##Info
+Grav is a modern open source flat-file CMS.
+
+https://getgrav.org/
+
 ## Requirements
 
 ### Windows
+- nodejs
+- php
 - unzip http://stahlworks.com/dev/unzip.exe
 - Docker
 - git
 
 ### Linux / Mac
+- nodejs
+- php
 - unzip 
 - Docker
 - git
@@ -28,6 +37,10 @@ For example Admin Plugin
 **Install Themes**
 
 `npm run grav:install bootstrap4`
+
+**Clear cache**
+
+`npm run grav:cmd clearcache`
 
 ## Strukture
 
