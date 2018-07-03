@@ -17,7 +17,9 @@
     "dev:uninstall": "docker-compose stop && docker-compose rm",
     "dev:env-start": "docker-compose start",
     "dev:env-stop": "docker-compose stop",
-    "dev": "./user/themes/$npm_package_config_theme/node_modules/gulp/bin/gulp.js --gulpfile .user/themes/$npm_package_config_theme/gulpfile.js"
+    "dev": "./user/themes/$npm_package_config_theme/node_modules/gulp/bin/gulp.js --gulpfile .user/themes/$npm_package_config_theme/gulpfile.js",
+    "grav:list": "docker-compose exec -u www-data gravcms php bin/grav list",
+    "grav:install": "docker-compose exec -u www-data gravcms php bin/gpm install"
   },
   "keywords": [
     "grav",
