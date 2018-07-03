@@ -27,6 +27,8 @@ This is a perfekt ready to run Dev Environment to build fast and flexible your G
 
 `npm run dev:install`
 
+After `npm run dev:install` your website is up and running on http://localhost:8080
+
 ## Start dev Environment
 
 `npm run dev`
@@ -53,7 +55,3 @@ data -> Storage for shared stuff
 user -> Grav user dir mounted to the docker container. This is the main directory of all code changes.
 
 tmp -> Downloads and temp stuff to store
-
-## Running
-
-After `npm run dev:install` is your website Running and up on http://localhost:8080
