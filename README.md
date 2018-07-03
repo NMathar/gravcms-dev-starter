@@ -5,6 +5,9 @@ Grav is a modern open source flat-file CMS.
 
 https://getgrav.org/
 
+
+This is a perfekt ready to run Dev Environment to Build fast and flexible your Grave CMS Homepage.
+
 ## Requirements
 
 ### Windows
