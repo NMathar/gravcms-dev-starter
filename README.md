@@ -43,7 +43,6 @@ So to prevent this we have installed a nice tool called browser-sync we can run 
 
 after this command our website is opening and after changes in the user directory our browser reload automatically and save us from annoying tasks.
 
-
 ## Grav commands
 
 **Install Plugins**
