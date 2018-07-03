@@ -25,6 +25,8 @@ This is a perfect ready to run Dev environment to build fast and flexible your G
 
 ## Installation
 
+`npm install`
+
 `npm run dev:install`
 
 After `npm run dev:install` your website is up and running on http://localhost:8080
