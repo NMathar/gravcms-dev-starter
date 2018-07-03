@@ -5,7 +5,7 @@
   "main": "index.js",
   "config" : { "version" : "1.4.6" },
   "scripts": {
-    "dev:test": "echo grav-v$npm_package_config_version.zip",
+    "dev:test": "echo ./tmp/grav-v$npm_package_config_version.zip",
     "dev:download": "wget -O grav-v$npm_package_config_version.zip https://getgrav.org/download/core/grav/$npm_package_config_version",
     "dev:unzip": "unzip grav-v$npm_package_config_version.zip 'user/*' -d user",
     "dev:clear": "rm grav-v$npm_package_config_grav-version.zip",
