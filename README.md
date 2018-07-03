@@ -14,12 +14,14 @@ This is a perfect ready to run Dev environment to build fast and flexible your G
 - nodejs
 - unzip http://stahlworks.com/dev/unzip.exe
 - Docker
+- docker-compose
 - git
 
 ### Linux / Mac
 - nodejs
 - unzip 
 - Docker
+- docker-compose
 - git
 
 
