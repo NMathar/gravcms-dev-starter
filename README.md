@@ -1,6 +1,6 @@
 # Grav CMS Development starter Package
 
-##Info
+## Info
 Grav is a modern open source flat-file CMS.
 
 https://getgrav.org/
