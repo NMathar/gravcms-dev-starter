@@ -1,12 +1,17 @@
 version: '3'
 services:
   gravcms:
+    build:
+      context: ./docker
+      #dockerfile: Dockerfile-alternate
+      args:
+        grav_version: ${GRAV_VERSION}
     image: nmonst4/gravcms-docker
     ports:
-    - "${PORT}:80"
+      - "${PORT}:80"
     volumes:
-    - ./user:/var/www/html/user
-    environment:
-      GRAV_VERSION: ${GRAV_VERSION}
+      - ./user:/var/www/html/user
+    #environment:
+    #  GRAV_VERSION: ${GRAV_VERSION}
 volumes:
   data:

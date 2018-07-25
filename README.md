@@ -31,7 +31,7 @@ This is a perfect ready to run Dev environment to build fast and flexible your G
 
 `npm run dev:install`
 
-After `npm run dev:install` your website is up and running on http://localhost:8080
+After `npm run dev:install` your website is up and running on http://localhost:8080 or your defined port at package.json
 
 ## Start dev Environment
 
@@ -58,9 +58,17 @@ For example Admin-Plugin
 
 `npm run grav:cmd clearcache`
 
+**Upgrade Grav CMS**
+
+`npm run grav:gpm self-upgrade`
+
 ## Structure
 
 data -> Storage for shared stuff 
+
+docker -> Build Script to change Grav Version easily
+
+*to run different Grav Versions you need to uninstall your environment and change the version in package.json and install it again* 
 
 user -> Grav user dir mounted to the docker container. This is the main directory of all code changes.
 
