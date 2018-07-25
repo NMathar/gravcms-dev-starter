@@ -4,8 +4,8 @@
   "description": "Template for Grav CMS easy Development with docker",
   "main": "index.js",
   "config": {
-    "version": "1.4.1",
-    "port": "8081"
+    "version": "1.4.7",
+    "port": "8080"
   },
   "scripts": {
     "dev:test": "echo ./tmp/grav-v$npm_package_config_version.zip",
