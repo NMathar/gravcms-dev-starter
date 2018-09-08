@@ -4,14 +4,14 @@
   "description": "Template for Grav CMS easy Development with docker",
   "main": "index.js",
   "config": {
-    "version": "1.4.8",
+    "version": "1.5.1",
     "port": "8080"
   },
   "scripts": {
     "dev:test": "echo ./tmp/grav-v$npm_package_config_version.zip",
     "dev:download": "wget -O ./tmp/grav-v$npm_package_config_version.zip https://getgrav.org/download/core/grav/$npm_package_config_version",
     "dev:unzip": "unzip ./tmp/grav-v$npm_package_config_version.zip 'grav/user/*' -d user && cp -r user/grav/user/* user && rm -r user/grav",
-    "dev:setvars": "[ -e .env ] && rm .env && printf '%s\n' 'GRAV_VERSION='$npm_package_config_version 'PORT='$npm_package_config_port >> .env",
+    "dev:setvars": "rm -f .env && printf '%s\n' 'GRAV_VERSION='$npm_package_config_version 'PORT='$npm_package_config_port >> .env",
     "dev:install": "npm run dev:download && npm run dev:unzip && npm run dev:setvars && docker-compose up -d",
     "dev:clear": "rm -f ./tmp/grav-v$npm_package_config_version.zip",
     "dev:uninstall": "docker-compose stop && docker-compose down --rmi 'all' && npm run dev:clear",
@@ -33,6 +33,6 @@
   "author": "Author",
   "license": "ISC",
   "dependencies": {
-    "browser-sync": "^2.24.6"
+    "browser-sync": "^2.24.7"
   }
 }
